@@ -1,4 +1,5 @@
 
+
 ScreenManager:
     Screen:
         id:pagina_principal
@@ -6,66 +7,73 @@ ScreenManager:
         FloatLayout:
             id:Principalfloat
 
-            Button:
+            MDRaisedButton:
                 id:projected_demand
                 text:"Start"
-                size_hint:(0.1,0.1)
+                size_hint:(0.1,0.05)
                 pos_hint:{"x":0.15,"y":0.10}
                 background_color:(0.5,0.1,1,1)
                 on_release:app.get_demand()
 
-            Button:
+            MDRaisedButton:
                 id:real_demand
                 text:"Requests"
-                size_hint:(0.1,0.1)
+                size_hint:(0.1,0.05)
                 pos_hint:{"x":0.75,"y":0.25}
                 background_color:(0.1,1,0.5,1)
                 on_release:app.real_demand()
 
-            Button:
+            MDRaisedButton:
                 id:Raw
                 text:"RMWH"
-                size_hint:(0.1,0.1)
+                size_hint:(0.1,0.05)
                 pos_hint:{"x":0.15,"y":0.85}
                 on_release:app.RMWH()
 
-            Button:
+            MDRaisedButton:
                 id:add_rm
                 text:"Add \nRaw Material"
-                size_hint:(0.15,0.1)
+                size_hint:(0.15,0.05)
                 pos_hint:{"x":0.15,"y":0.55}
                 on_release:app.menu.open()
 
 
             Button:
                 id:S1
-                text:"Stage 1"
-                size_hint:(0.1,0.1)
+
+                size_hint:(0.1,0.10)
                 pos_hint:{"x":0.40,"y":0.85}
+                background_down :'Stage 1.jpg'
+                background_normal :'Stage 1.jpg'
                 on_release:app.S1()
 
             Button:
                 id:S2
-                text:"Stage 2"
-                size_hint:(0.1,0.1)
+
+                size_hint:(0.1,0.10)
                 pos_hint:{"x":0.40,"y":0.65}
+                background_down :'Stage 2.jpg'
+                background_normal :'Stage 2.jpg'
                 on_release:app.S2()
 
             Button:
                 id:S3
-                text:"Stage 3"
-                size_hint:(0.1,0.1)
+
+                size_hint:(0.1,0.10)
                 pos_hint:{"x":0.40,"y":0.45}
+                background_down :'Stage 3.jpg'
+                background_normal :'Stage 3.jpg'
                 on_release:app.S3()
 
-            Button:
+            MDRaisedButton:
                 text:"Process \nnoise"
-                size_hint:(0.1,0.1)
+                size_hint:(0.1,0.05)
                 pos_hint:{"x":0.40,"y":0.25}
                 on_release:app.Noice()
 
-            Button:
+            MDRaisedButton:
                 text:"Summary"
-                size_hint:(0.1,0.1)
-                pos_hint:{"x":0.75,"y":0.75}
+                size_hint:(0.1,0.05)
+                pos_hint:{"x":0.80,"y":0.85}
                 on_release:app.Summary()
+                
